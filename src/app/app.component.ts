@@ -7,7 +7,7 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
   imports: [RouterOutlet, TodoListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  providers: []
+  providers: [],
 })
 export class AppComponent {
   title = 'ngrx-store-todo';

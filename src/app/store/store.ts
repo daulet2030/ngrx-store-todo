@@ -1,18 +1,17 @@
-import { Action, ActionReducer } from "@ngrx/store";
-import { todoReducer, TodoState } from "./reduces";
-import { TodoEffects } from "./effects";
+import { Action, ActionReducer } from '@ngrx/store';
+import { todoReducer, TodoState } from './reduces';
+import { TodoEffects } from './effects';
 
 export interface AppState {
-    todo: TodoState
-  }
+  todo: TodoState;
+}
 
-  export interface AppStore {
-    todo: ActionReducer<TodoState, Action>;
-  }
-  
+export interface AppStore {
+  todo: ActionReducer<TodoState, Action>;
+}
 
-  export const appStore: AppStore = {
-    todo: todoReducer
-  }
+export const appStore: AppStore = {
+  todo: todoReducer,
+};
 
-  export const appEffects = [TodoEffects];
+export const appEffects = [TodoEffects];

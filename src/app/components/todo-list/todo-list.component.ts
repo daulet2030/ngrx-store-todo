@@ -38,6 +38,8 @@ export class TodoListComponent implements OnInit {
   }
 
   complete(todo: Todo) {
-    this.store.dispatch(updateTodo({id:todo.id, todo : {...todo, completed: true}}));
+    this.store.dispatch(
+      updateTodo({ id: todo.id, todo: { ...todo, completed: true } }),
+    );
   }
 }

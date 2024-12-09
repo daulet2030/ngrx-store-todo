@@ -33,13 +33,17 @@ export const todoReducer = createReducer(
   })),
   on(addTodo, (state, { todo }) => {
     return { ...state, todos: [...state.todos, todo] };
-  })
-  ,
+  }),
   on(updateTodo, (state, { id, todo }) => {
-    const index = state.todos.findIndex(item=> item.id === id);
+    const index = state.todos.findIndex((item) => item.id === id);
 
-    return { ...state, todos: [ ...state.todos.slice(0, index),
-        {...state.todos[index], ...todo},
-        ...state.todos.slice(index + 1)] };
-  })
+    return {
+      ...state,
+      todos: [
+        ...state.todos.slice(0, index),
+        { ...state.todos[index], ...todo },
+        ...state.todos.slice(index + 1),
+      ],
+    };
+  }),
 );

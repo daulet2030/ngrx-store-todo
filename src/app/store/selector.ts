@@ -6,5 +6,5 @@ const feature = (state: AppState) => state.todo;
 
 export const todoSelector = createSelector(
   feature,
-  (state: TodoState) => state.todos
+  (state: TodoState) => state.todos,
 );
