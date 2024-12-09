@@ -1,13 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TodoserviceService } from './todoservice.service';
+import { ToDoService } from './todoservice.service';
 
-describe('TodoserviceService', () => {
-  let service: TodoserviceService;
+describe('ToDoService', () => {
+  let service: ToDoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(TodoserviceService);
+    const httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+    service = new ToDoService(httpClientSpy);
   });
 
   it('should be created', () => {
