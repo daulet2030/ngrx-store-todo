@@ -1,5 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { ToDoService } from '../../services/todoservice.service';
 import { AppState } from '../../store/store';
 import { Store } from '@ngrx/store';
 import { todoSelector } from '../../store/selector';
